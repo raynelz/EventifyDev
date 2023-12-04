@@ -1,0 +1,6 @@
+framework module Pods_EventifyDev {
+  umbrella header "Pods-EventifyDev-umbrella.h"
+
+  export *
+  module * { export * }
+}

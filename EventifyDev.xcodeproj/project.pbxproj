@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1FD2AF61F6B5402C5604778 /* Pods_EventifyDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F8113B77070E74204888A0 /* Pods_EventifyDev.framework */; };
 		ECB289C72B1E366200239E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB289C62B1E366200239E54 /* AppDelegate.swift */; };
-		ECB289C92B1E366200239E54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB289C82B1E366200239E54 /* SceneDelegate.swift */; };
 		ECB289CB2B1E366200239E54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB289CA2B1E366200239E54 /* ViewController.swift */; };
-		ECB289CE2B1E366200239E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB289CC2B1E366200239E54 /* Main.storyboard */; };
 		ECB289D12B1E366200239E54 /* EventifyDev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB289CF2B1E366200239E54 /* EventifyDev.xcdatamodeld */; };
 		ECB289D32B1E366300239E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB289D22B1E366300239E54 /* Assets.xcassets */; };
 		ECB289D62B1E366300239E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */; };
+		ECDEF13E2B1E3915000CB1E4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEF13D2B1E3915000CB1E4 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2334F85A72C882FC165878 /* Pods-EventifyDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyDev.release.xcconfig"; path = "Target Support Files/Pods-EventifyDev/Pods-EventifyDev.release.xcconfig"; sourceTree = "<group>"; };
+		20F8113B77070E74204888A0 /* Pods_EventifyDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventifyDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		751931826EDFE45015FB0D47 /* Pods-EventifyDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventifyDev.debug.xcconfig"; path = "Target Support Files/Pods-EventifyDev/Pods-EventifyDev.debug.xcconfig"; sourceTree = "<group>"; };
 		ECB289C32B1E366200239E54 /* EventifyDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventifyDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB289C62B1E366200239E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECB289C82B1E366200239E54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECB289CA2B1E366200239E54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECB289CD2B1E366200239E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECB289D02B1E366200239E54 /* EventifyDev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventifyDev.xcdatamodel; sourceTree = "<group>"; };
 		ECB289D22B1E366300239E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB289D52B1E366300239E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECB289D72B1E366300239E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECDEF13D2B1E3915000CB1E4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1FD2AF61F6B5402C5604778 /* Pods_EventifyDev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C94AF2D10A53627F133362F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20F8113B77070E74204888A0 /* Pods_EventifyDev.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C722B019866E896F587D2F9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				751931826EDFE45015FB0D47 /* Pods-EventifyDev.debug.xcconfig */,
+				1A2334F85A72C882FC165878 /* Pods-EventifyDev.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECB289BA2B1E366200239E54 = {
 			isa = PBXGroup;
 			children = (
 				ECB289C52B1E366200239E54 /* EventifyDev */,
 				ECB289C42B1E366200239E54 /* Products */,
+				C722B019866E896F587D2F9B /* Pods */,
+				3C94AF2D10A53627F133362F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +80,39 @@
 		ECB289C52B1E366200239E54 /* EventifyDev */ = {
 			isa = PBXGroup;
 			children = (
-				ECB289C62B1E366200239E54 /* AppDelegate.swift */,
-				ECB289C82B1E366200239E54 /* SceneDelegate.swift */,
-				ECB289CA2B1E366200239E54 /* ViewController.swift */,
-				ECB289CC2B1E366200239E54 /* Main.storyboard */,
-				ECB289D22B1E366300239E54 /* Assets.xcassets */,
-				ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */,
-				ECB289D72B1E366300239E54 /* Info.plist */,
+				ECDEF13A2B1E3825000CB1E4 /* Application */,
+				ECDEF13C2B1E3863000CB1E4 /* Resources */,
+				ECDEF13B2B1E384A000CB1E4 /* Authentication */,
 				ECB289CF2B1E366200239E54 /* EventifyDev.xcdatamodeld */,
 			);
 			path = EventifyDev;
+			sourceTree = "<group>";
+		};
+		ECDEF13A2B1E3825000CB1E4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				ECB289C62B1E366200239E54 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		ECDEF13B2B1E384A000CB1E4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				ECB289CA2B1E366200239E54 /* ViewController.swift */,
+				ECDEF13D2B1E3915000CB1E4 /* ForgotPasswordViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		ECDEF13C2B1E3863000CB1E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECB289D72B1E366300239E54 /* Info.plist */,
+				ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */,
+				ECB289D22B1E366300239E54 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECB289DA2B1E366300239E54 /* Build configuration list for PBXNativeTarget "EventifyDev" */;
 			buildPhases = (
+				829B42778FDED3789D0D019E /* [CP] Check Pods Manifest.lock */,
 				ECB289BF2B1E366200239E54 /* Sources */,
 				ECB289C02B1E366200239E54 /* Frameworks */,
 				ECB289C12B1E366200239E54 /* Resources */,
+				3619D84EFE18330DA83A3347 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,35 +177,68 @@
 			files = (
 				ECB289D62B1E366300239E54 /* LaunchScreen.storyboard in Resources */,
 				ECB289D32B1E366300239E54 /* Assets.xcassets in Resources */,
-				ECB289CE2B1E366200239E54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3619D84EFE18330DA83A3347 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EventifyDev/Pods-EventifyDev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EventifyDev/Pods-EventifyDev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EventifyDev/Pods-EventifyDev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		829B42778FDED3789D0D019E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EventifyDev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECB289BF2B1E366200239E54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDEF13E2B1E3915000CB1E4 /* ForgotPasswordViewController.swift in Sources */,
 				ECB289CB2B1E366200239E54 /* ViewController.swift in Sources */,
 				ECB289D12B1E366200239E54 /* EventifyDev.xcdatamodeld in Sources */,
 				ECB289C72B1E366200239E54 /* AppDelegate.swift in Sources */,
-				ECB289C92B1E366200239E54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECB289CC2B1E366200239E54 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECB289CD2B1E366200239E54 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -207,7 +287,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -270,7 +350,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -291,6 +371,7 @@
 		};
 		ECB289DB2B1E366300239E54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 751931826EDFE45015FB0D47 /* Pods-EventifyDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,12 +379,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X6KB2A8YM9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EventifyDev/Info.plist;
+				INFOPLIST_FILE = EventifyDev/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Eventify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +401,7 @@
 		};
 		ECB289DC2B1E366300239E54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2334F85A72C882FC165878 /* Pods-EventifyDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,12 +409,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X6KB2A8YM9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EventifyDev/Info.plist;
+				INFOPLIST_FILE = EventifyDev/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Eventify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
