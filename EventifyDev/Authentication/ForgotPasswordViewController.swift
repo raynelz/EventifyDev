@@ -58,6 +58,7 @@ private extension ForgotPasswordViewController {
         subheader.snp.makeConstraints {
             $0.top.equalTo(header.snp.bottomMargin).offset(10)
             $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).offset(-5)
             
         }
         
