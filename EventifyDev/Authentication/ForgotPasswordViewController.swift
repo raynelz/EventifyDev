@@ -49,28 +49,30 @@ private extension ForgotPasswordViewController {
 private extension ForgotPasswordViewController {
     /// Функция расчёта для констрейнтов.
     func setupLayout() {
-        header.snp.makeConstraints { make in
-            make.top.equalTo(view.snp_topMargin).offset(50)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
+        header.snp.makeConstraints {
+            $0.top.equalTo(view.snp.topMargin).offset(50)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).offset(-5)
         }
         
-        subheader.snp.makeConstraints { make in
-            make.top.equalTo(header.snp_bottomMargin).offset(10)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
+        subheader.snp.makeConstraints {
+            $0.top.equalTo(header.snp.bottomMargin).offset(10)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            
         }
         
-        emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(subheader.snp_bottomMargin).offset(20)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
-            make.trailing.equalTo(view.snp_trailingMargin).inset(5)
-            make.height.equalTo(50)
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(subheader.snp.bottomMargin).offset(20)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).inset(5)
+            $0.height.equalTo(50)
         }
         
-        resetButton.snp.makeConstraints { make in
-            make.top.equalTo(emailTextField.snp_bottomMargin).offset(30)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
-            make.trailing.equalTo(view.snp_trailingMargin).inset(5)
-            make.height.equalTo(50)
+        resetButton.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp.bottomMargin).offset(30)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).inset(5)
+            $0.height.equalTo(50)
         }
     }
 }
