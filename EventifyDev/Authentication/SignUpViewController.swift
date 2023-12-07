@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
 final class SignUpViewController: UIViewController {
 
     private let header = UILabel()
     private let subheader = UILabel()
+
     private let emailTextField = UITextField()
     private let passwordTextField = UITextField()
+
     private let signupButton = UIButton()
     
     override func viewDidLoad() {
@@ -45,28 +48,29 @@ private extension SignUpViewController {
 private extension SignUpViewController {
     /// Функция расчёта для констрейнтов.
     func setupLayout() {
-        header.snp.makeConstraints { make in
-            make.top.equalTo(view.snp_topMargin).offset(50)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
+        header.snp.makeConstraints {
+            $0.top.equalTo(view.snp_topMargin).offset(50)
+            $0.leading.equalTo(view.snp_leadingMargin).offset(5)
         }
         
-        subheader.snp.makeConstraints { make in
-            make.top.equalTo(header.snp_bottomMargin).offset(10)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
+        subheader.snp.makeConstraints {
+            $0.top.equalTo(header.snp_bottomMargin).offset(10)
+            $0.leading.equalTo(view.snp_leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp_trailingMargin).inset(5)
         }
         
-        emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(subheader.snp_bottomMargin).offset(30)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
-            make.trailing.equalTo(view.snp_trailingMargin).inset(5)
-            make.height.equalTo(50)
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(subheader.snp_bottomMargin).offset(30)
+            $0.leading.equalTo(view.snp_leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp_trailingMargin).inset(5)
+            $0.height.equalTo(50)
         }
         
-        passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(emailTextField.snp_bottomMargin).offset(20)
-            make.leading.equalTo(view.snp_leadingMargin).offset(5)
-            make.trailing.equalTo(view.snp_trailingMargin).inset(5)
-            make.height.equalTo(50)
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp_bottomMargin).offset(20)
+            $0.leading.equalTo(view.snp_leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp_trailingMargin).inset(5)
+            $0.height.equalTo(50)
         }
         
         signupButton.snp.makeConstraints { make in
@@ -105,13 +109,11 @@ private extension SignUpViewController {
     /// Функция для установки данных в UI
     func setupData() {
         header.text = "Sign Up"
-        subheader.text = """
-        Please, create a new account.
-        It takes less than one minute.
-        """
+        subheader.text = "Please, create a new account. It takes less than one minute."
         
         emailTextField.placeholder = "Email"
         passwordTextField.placeholder = "Password"
+
         signupButton.setTitle("Sign Up", for: .normal)
     }
 }
