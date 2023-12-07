@@ -61,6 +61,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DD12EF1A2B1F95DE0015D921 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ECB289BA2B1E366200239E54 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +121,7 @@
 				ECB289D72B1E366300239E54 /* Info.plist */,
 				ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */,
 				ECB289D22B1E366300239E54 /* Assets.xcassets */,
+				DD12EF1A2B1F95DE0015D921 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
