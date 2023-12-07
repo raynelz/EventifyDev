@@ -73,7 +73,7 @@ private extension SignUpViewController {
             $0.height.equalTo(50)
         }
         
-        signupButton.snp.makeConstraints { make in
+        signupButton.snp.makeConstraints {
             $0.top.equalTo(passwordTextField.snp_bottomMargin).offset(80)
             $0.leading.equalTo(view.snp_leadingMargin).offset(5)
             $0.trailing.equalTo(view.snp_trailingMargin).inset(5)
