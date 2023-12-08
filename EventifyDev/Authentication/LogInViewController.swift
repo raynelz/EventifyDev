@@ -11,100 +11,37 @@ import SnapKit
 
 final class LogInViewController: UIViewController {
     
+    //MARK: - UI
+    private let header = UILabel()
+    private let subheader = UILabel()
+    private let dontHaveAnAccountLabel = UILabel()
     
-    //MARK: - Declaring Components
+    private let emailTextField = UITextField()
+    private let passwordTextField = UITextField()
     
-    //emailTextField label
-    private let emailTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Email"
-        textField.borderStyle = .roundedRect
-        textField.keyboardType = .emailAddress
-        return textField
-    }()
+    private let forgotPasswordButton = UIButton()
+    private let loginButton = UIButton()
+    private let signUpButton = UIButton()
     
-    private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Password"
-        textField.borderStyle = .roundedRect
-        textField.isSecureTextEntry = true
-        
-        return textField
-    }()
-    
-    //login label
-    private let loginLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0 // Разрешаем многострочный текст
-        
-        let attributedString = NSMutableAttributedString(
-            string: "Log In\n",
-            attributes: [.font: UIFont.systemFont(ofSize: 40, weight: .bold)]
-        )
-        
-        attributedString.append(NSAttributedString(
-            string: "Please, log into your account.\nIt takes less then one minute.",
-            attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.gray]
-        ))
-        
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    
-    //ForgotPassword? Button
-    private let forgotPasswordButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Forgot Password?", for: .normal)
-        button.setTitleColor(.gray, for: .normal)
-        
-        return button
-    }()
-    
-    //LogIn Button
-    private let loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Log In", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .brandYellow
-        button.layer.cornerRadius = 5
-        return button
-    }()
-    
-    //SignUp Button
-    private let signUpButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Sign Up", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        return button
-    }()
-    
-    
-    //dontHaveAccountLabel
-    private let dontHaveAnAccountLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Don’t have an account?"
-        label.textColor = .gray
-        return label
-    }()
-    
-    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        setupViews()
-        setupConstraints()
-        setupButtons()
+        
+        embedViews()
+        setupLayout()
+        setupAppearance()
+        setupData()
+        setupBehavior()
     }
 }
-    //MARK: - Add New Views
+//MARK: - Add New Views
 
 private extension LogInViewController {
-    func setupViews() {
+    func embedViews() {
         [
+            header,
+            subheader,
             emailTextField,
             passwordTextField,
-            loginLabel,
             forgotPasswordButton,
             loginButton,
             signUpButton,
@@ -112,88 +49,120 @@ private extension LogInViewController {
         ].forEach { view.addSubview($0) }
     }
 }
-    //MARK: - Constraints
+//MARK: - Constraints
 
 private extension LogInViewController {
-    func setupConstraints() {
-        // Общий отступ для элементов
-        let horizontalPadding = 10
-        
-        //emailTextField Constraints
-        emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(loginLabel.snp.bottom).offset(20)
-            make.leading.equalTo(view.safeAreaLayoutGuide).offset(horizontalPadding)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-10)
-            make.height.equalTo(50)
-            
+    func setupLayout() {
+        // logInLabel
+        header.snp.makeConstraints {
+            $0.top.equalTo(view.snp.topMargin).offset(20)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
         }
         
-        //passwordTextField Constraints
-        passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(emailTextField.snp.bottom).offset(10)
-            make.leading.equalTo(view.safeAreaLayoutGuide).offset(horizontalPadding)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-10)
-            make.height.equalTo(50)
+        //descriptionLabel
+        subheader.snp.makeConstraints {
+            $0.top.equalTo(header.snp.bottomMargin).offset(10)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+        }
+        
+        emailTextField.snp.makeConstraints {
+            $0.top.equalTo(subheader.snp.bottomMargin).offset(20)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).offset(-5)
+            $0.height.equalTo(50)
             
         }
-
-        //loginLabel Constraints
-        loginLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(30)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(horizontalPadding)
+        
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(emailTextField.snp.bottomMargin).offset(20)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).offset(-5)
+            $0.height.equalTo(50)
         }
-
-        //LogIn Button Constraints
-        loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
-            make.leading.equalTo(view.safeAreaLayoutGuide).offset(horizontalPadding)
-            make.trailing.equalTo(view.safeAreaLayoutGuide).offset(-10)
-            make.height.equalTo(45)
-            
+        
+        //forgotPasswordButton
+        forgotPasswordButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottomMargin).offset(10)
+            $0.trailing.equalTo(view.snp.trailingMargin).offset(-5)
         }
-
-        //ForgotPasswordButton Constraints
-        forgotPasswordButton.snp.makeConstraints { make in
-            make.top.equalTo(loginButton.snp.bottom).offset(10)
-            make.right.equalTo(loginButton.snp.right)
+        
+        // logInButton
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(forgotPasswordButton.snp.bottom).offset(40)
+            $0.leading.equalTo(view.snp.leadingMargin).offset(5)
+            $0.trailing.equalTo(view.snp.trailingMargin).offset(-5)
+            $0.height.equalTo(50)
         }
-
-        //SignUpButton Constraints
-        signUpButton.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-5)
-            make.centerX.equalToSuperview()
+        
+        // signUpLabel
+        dontHaveAnAccountLabel.snp.makeConstraints {
+            $0.bottom.equalTo(view.snp.bottomMargin).offset(-30)
+            $0.centerX.equalTo(view.snp.centerX)
         }
-
-        //dontHaveAnAccountLabel Constraints
-        dontHaveAnAccountLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(signUpButton.snp.topMargin).offset(0)
-            make.centerX.equalToSuperview()
-
+        
+        // signUpButton
+        signUpButton.snp.makeConstraints {
+            $0.top.equalTo(dontHaveAnAccountLabel.snp.bottomMargin).offset(5)
+            $0.centerX.equalTo(view.snp.centerX)
         }
+        
     }
 }
-    //MARK: - ButtonsHighlited
+
+//MARK: - Setup Appearance
 private extension LogInViewController {
-    func setupButtons() {
-        setupButton(button: forgotPasswordButton)
-        setupButton(button: loginButton)
-        setupButton(button: signUpButton)
+    /// Функция для настройки цветов, шрифтов и всего UI
+    func setupAppearance() {
+        view.backgroundColor = .white
+        
+        header.textColor = .label
+        header.font = .systemFont(ofSize: 40, weight: .semibold)
+        
+        subheader.textColor = .secondaryLabel
+        subheader.font = .systemFont(ofSize: 20, weight: .medium)
+        
+        emailTextField.borderStyle = .roundedRect
+        
+        passwordTextField.borderStyle = .roundedRect
+        passwordTextField.isSecureTextEntry = true
+        
+        forgotPasswordButton.setTitleColor(.gray, for: .normal)
+        
+        loginButton.setTitleColor(.black, for: .normal)
+        loginButton.backgroundColor = .brandYellow
+        loginButton.layer.cornerRadius = 5
+        
+        signUpButton.setTitleColor(.black, for: .normal)
+        
+        dontHaveAnAccountLabel.textColor = .gray
+        
     }
+}
 
-    func setupButton(button: UIButton) {
-        button.addTarget(self, action: #selector(handleButtonTouchDown(_:)), for: .touchDown)
-        button.addTarget(self, action: #selector(handleButtonTouchUp(_:)), for: [.touchUpInside, .touchUpOutside, .touchCancel])
+//MARK: - setupData
+private extension LogInViewController {
+    func setupData() {
+        header.text = "Log In"
+        subheader.text = "Please, create a new account.\nIt takes less than one minute."
+        
+        loginButton.setTitle("Log In", for: .normal)
+        
+        forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
+        
+        emailTextField.placeholder = "Email"
+        
+        passwordTextField.placeholder = "Password"
+        
+        signUpButton.setTitle("Sign Up", for: .normal)
+        
+        dontHaveAnAccountLabel.text = "Don’t have an account?"
     }
+}
 
-    @objc func handleButtonTouchDown(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.2) {
-            sender.alpha = 0.7
-        }
-    }
-
-    @objc func handleButtonTouchUp(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.2) {
-            sender.alpha = 1.0
-        }
+//MARK: - Setup Behavior
+private extension LogInViewController {
+    /// Функция для настройки поведения, нажатия, делегаты и т.д.
+    func setupBehavior() {
+        print("OK")
     }
 }
