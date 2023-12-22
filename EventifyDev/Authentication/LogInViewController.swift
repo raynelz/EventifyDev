@@ -172,12 +172,3 @@ private extension LogInViewController {
     
     
 }
-
-//MARK: - Hot Reload
-#if DEBUG
-extension LogInViewController {
-    @objc func injected() {
-        viewDidLoad()
-    }
-}
-#endif
