@@ -110,16 +110,18 @@ private extension LogInViewController {
 }
 
 //MARK: - Setup Appearance
+
 private extension LogInViewController {
     /// Функция для настройки цветов, шрифтов и всего UI
     func setupAppearance() {
         view.backgroundColor = .white
         
         header.textColor = .label
-        header.font = .systemFont(ofSize: 40, weight: .semibold)
+        header.font = UIFont(name: "SF Pro Rounded Semibold", size: 40)
         
         subheader.textColor = .secondaryLabel
-        subheader.font = .systemFont(ofSize: 20, weight: .medium)
+        subheader.font = UIFont(name: "SF Pro Rounded Medium", size: 20)
+        subheader.numberOfLines = 0
         
         emailTextField.borderStyle = .roundedRect
         
@@ -130,7 +132,7 @@ private extension LogInViewController {
         
         loginButton.setTitleColor(.black, for: .normal)
         loginButton.backgroundColor = .brandYellow
-        loginButton.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = 8
         
         signUpButton.setTitleColor(.black, for: .normal)
         
@@ -140,6 +142,7 @@ private extension LogInViewController {
 }
 
 //MARK: - setupData
+
 private extension LogInViewController {
     func setupData() {
         header.text = "Log In"
@@ -149,7 +152,7 @@ private extension LogInViewController {
         
         forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
         
-        emailTextField.placeholder = "Email"
+        emailTextField.placeholder = "email"
         
         passwordTextField.placeholder = "Password"
         
@@ -160,9 +163,20 @@ private extension LogInViewController {
 }
 
 //MARK: - Setup Behavior
+
 private extension LogInViewController {
     /// Функция для настройки поведения, нажатия, делегаты и т.д.
     func setupBehavior() {
         print("OK")
     }
+    
+    
 }
+
+#if DEBUG
+extension LogInViewController {
+    @objc func injected() {
+        viewDidLoad()
+    }
+}
+#endif

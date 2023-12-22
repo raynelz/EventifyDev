@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  EventifyDev
 //
-//  Created by imac on 6.12.23.
+//  Created by gleb on 6.12.23.
 //
 
 import UIKit
@@ -100,7 +100,7 @@ private extension SignUpViewController {
         passwordTextField.isSecureTextEntry = true
         
         signupButton.layer.cornerRadius = 8
-        signupButton.backgroundColor = UIColor(named: "BrandYellow")
+        signupButton.backgroundColor = .brandYellow
         signupButton.setTitleColor(.black, for: .normal)
     }
 }
