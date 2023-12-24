@@ -85,16 +85,16 @@ private extension ForgotPasswordViewController {
         view.backgroundColor = .white
         
         header.textColor = .label
-        header.font = .systemFont(ofSize: 40, weight: .semibold)
+        header.font = UIFont(name: S.Fonts.semibold, size: 40)
         
         subheader.textColor = .secondaryLabel
-        subheader.font = .systemFont(ofSize: 20, weight: .medium)
+        subheader.font = UIFont(name: S.Fonts.medium, size: 20)
         subheader.numberOfLines = 0
         
         emailTextField.borderStyle = .roundedRect
         
         resetButton.layer.cornerRadius = 8
-        resetButton.backgroundColor = UIColor(named: "BrandYellow")
+        resetButton.backgroundColor = I.brandYellow.color
         resetButton.setTitleColor(.black, for: .normal)
     }
 }

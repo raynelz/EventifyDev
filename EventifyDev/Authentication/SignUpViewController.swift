@@ -88,10 +88,10 @@ private extension SignUpViewController {
         view.backgroundColor = .white
         
         header.textColor = .label
-        header.font = UIFont(name: "SF Pro Rounded Semibold", size: 40)
+        header.font = UIFont(name: S.Fonts.semibold, size: 40)
         
         subheader.textColor = .secondaryLabel
-        subheader.font = UIFont(name: "SF Pro Rounded Medium", size: 20)
+        subheader.font = UIFont(name: S.Fonts.medium, size: 20)
         subheader.numberOfLines = 0
         
         emailTextField.borderStyle = .roundedRect
@@ -100,7 +100,7 @@ private extension SignUpViewController {
         passwordTextField.isSecureTextEntry = true
         
         signupButton.layer.cornerRadius = 8
-        signupButton.backgroundColor = .brandYellow
+        signupButton.backgroundColor = I.brandYellow.color
         signupButton.setTitleColor(.black, for: .normal)
     }
 }
@@ -108,7 +108,7 @@ private extension SignUpViewController {
 private extension SignUpViewController {
     /// Функция для установки данных в UI
     func setupData() {
-        header.text = "Sign Up"
+        header.text = S.Signup.title
         subheader.text = "Please, create a new account. It takes less than one minute."
         
         emailTextField.placeholder = "Email"

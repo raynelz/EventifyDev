@@ -14,6 +14,9 @@
 		ECB289D12B1E366200239E54 /* EventifyDev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB289CF2B1E366200239E54 /* EventifyDev.xcdatamodeld */; };
 		ECB289D32B1E366300239E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB289D22B1E366300239E54 /* Assets.xcassets */; };
 		ECB289D62B1E366300239E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */; };
+		ECB2EF642B3870B300DF3752 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB2EF632B3870B300DF3752 /* Localizable.strings */; };
+		ECB2EF662B38717600DF3752 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2EF652B38717600DF3752 /* Strings+Generated.swift */; };
+		ECB2EF682B3873E700DF3752 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2EF672B3873E700DF3752 /* XCAssets+Generated.swift */; };
 		ECBE75592B3615E400860634 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE75582B3615E400860634 /* SignUpViewController.swift */; };
 		ECBE755E2B361A5A00860634 /* SF Pro Rounded Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECBE755D2B36175100860634 /* SF Pro Rounded Semibold.otf */; };
 		ECBE755F2B361A5C00860634 /* SF Pro Rounded Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECBE755C2B36175100860634 /* SF Pro Rounded Medium.otf */; };
@@ -34,6 +37,9 @@
 		ECB289D22B1E366300239E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB289D52B1E366300239E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECB289D72B1E366300239E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECB2EF632B3870B300DF3752 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		ECB2EF652B38717600DF3752 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		ECB2EF672B3873E700DF3752 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		ECBE75582B3615E400860634 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		ECBE755A2B36175000860634 /* SF Pro Rounded Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Rounded Bold.otf"; sourceTree = "<group>"; };
 		ECBE755B2B36175100860634 /* SF Pro Rounded Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Rounded Regular.otf"; sourceTree = "<group>"; };
@@ -107,8 +113,19 @@
 				ECDEF13C2B1E3863000CB1E4 /* Resources */,
 				ECDEF13B2B1E384A000CB1E4 /* Authentication */,
 				ECB289CF2B1E366200239E54 /* EventifyDev.xcdatamodeld */,
+				ECB2EF632B3870B300DF3752 /* Localizable.strings */,
+				ECB2EF692B3878AC00DF3752 /* Generated */,
 			);
 			path = EventifyDev;
+			sourceTree = "<group>";
+		};
+		ECB2EF692B3878AC00DF3752 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				ECB2EF652B38717600DF3752 /* Strings+Generated.swift */,
+				ECB2EF672B3873E700DF3752 /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		ECDEF13A2B1E3825000CB1E4 /* Application */ = {
@@ -204,6 +221,7 @@
 				ECBE755F2B361A5C00860634 /* SF Pro Rounded Medium.otf in Resources */,
 				ECBE75602B361A5D00860634 /* SF Pro Rounded Regular.otf in Resources */,
 				ECBE755E2B361A5A00860634 /* SF Pro Rounded Semibold.otf in Resources */,
+				ECB2EF642B3870B300DF3752 /* Localizable.strings in Resources */,
 				ECB289D62B1E366300239E54 /* LaunchScreen.storyboard in Resources */,
 				ECBE75612B361A6000860634 /* SF Pro Rounded Bold.otf in Resources */,
 				ECB289D32B1E366300239E54 /* Assets.xcassets in Resources */,
@@ -262,7 +280,9 @@
 				ECBE75592B3615E400860634 /* SignUpViewController.swift in Sources */,
 				ECDEF13E2B1E3915000CB1E4 /* ForgotPasswordViewController.swift in Sources */,
 				ECB289CB2B1E366200239E54 /* ViewController.swift in Sources */,
+				ECB2EF682B3873E700DF3752 /* XCAssets+Generated.swift in Sources */,
 				ECB289D12B1E366200239E54 /* EventifyDev.xcdatamodeld in Sources */,
+				ECB2EF662B38717600DF3752 /* Strings+Generated.swift in Sources */,
 				DD12EF192B1F49C00015D921 /* LogInViewController.swift in Sources */,
 				ECB289C72B1E366200239E54 /* AppDelegate.swift in Sources */,
 			);
