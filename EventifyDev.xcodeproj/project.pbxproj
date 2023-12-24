@@ -14,6 +14,11 @@
 		ECB289D12B1E366200239E54 /* EventifyDev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECB289CF2B1E366200239E54 /* EventifyDev.xcdatamodeld */; };
 		ECB289D32B1E366300239E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB289D22B1E366300239E54 /* Assets.xcassets */; };
 		ECB289D62B1E366300239E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB289D42B1E366300239E54 /* LaunchScreen.storyboard */; };
+		ECBE75592B3615E400860634 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBE75582B3615E400860634 /* SignUpViewController.swift */; };
+		ECBE755E2B361A5A00860634 /* SF Pro Rounded Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECBE755D2B36175100860634 /* SF Pro Rounded Semibold.otf */; };
+		ECBE755F2B361A5C00860634 /* SF Pro Rounded Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECBE755C2B36175100860634 /* SF Pro Rounded Medium.otf */; };
+		ECBE75602B361A5D00860634 /* SF Pro Rounded Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECBE755B2B36175100860634 /* SF Pro Rounded Regular.otf */; };
+		ECBE75612B361A6000860634 /* SF Pro Rounded Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECBE755A2B36175000860634 /* SF Pro Rounded Bold.otf */; };
 		ECDEF13E2B1E3915000CB1E4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDEF13D2B1E3915000CB1E4 /* ForgotPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,11 @@
 		ECB289D22B1E366300239E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB289D52B1E366300239E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECB289D72B1E366300239E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBE75582B3615E400860634 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		ECBE755A2B36175000860634 /* SF Pro Rounded Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Rounded Bold.otf"; sourceTree = "<group>"; };
+		ECBE755B2B36175100860634 /* SF Pro Rounded Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Rounded Regular.otf"; sourceTree = "<group>"; };
+		ECBE755C2B36175100860634 /* SF Pro Rounded Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Rounded Medium.otf"; sourceTree = "<group>"; };
+		ECBE755D2B36175100860634 /* SF Pro Rounded Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF Pro Rounded Semibold.otf"; sourceTree = "<group>"; };
 		ECDEF13D2B1E3915000CB1E4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +74,10 @@
 		DD12EF1A2B1F95DE0015D921 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				ECBE755A2B36175000860634 /* SF Pro Rounded Bold.otf */,
+				ECBE755C2B36175100860634 /* SF Pro Rounded Medium.otf */,
+				ECBE755B2B36175100860634 /* SF Pro Rounded Regular.otf */,
+				ECBE755D2B36175100860634 /* SF Pro Rounded Semibold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -108,6 +122,7 @@
 		ECDEF13B2B1E384A000CB1E4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				ECBE75582B3615E400860634 /* SignUpViewController.swift */,
 				DD12EF182B1F49C00015D921 /* LogInViewController.swift */,
 				ECB289CA2B1E366200239E54 /* ViewController.swift */,
 				ECDEF13D2B1E3915000CB1E4 /* ForgotPasswordViewController.swift */,
@@ -186,7 +201,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBE755F2B361A5C00860634 /* SF Pro Rounded Medium.otf in Resources */,
+				ECBE75602B361A5D00860634 /* SF Pro Rounded Regular.otf in Resources */,
+				ECBE755E2B361A5A00860634 /* SF Pro Rounded Semibold.otf in Resources */,
 				ECB289D62B1E366300239E54 /* LaunchScreen.storyboard in Resources */,
+				ECBE75612B361A6000860634 /* SF Pro Rounded Bold.otf in Resources */,
 				ECB289D32B1E366300239E54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBE75592B3615E400860634 /* SignUpViewController.swift in Sources */,
 				ECDEF13E2B1E3915000CB1E4 /* ForgotPasswordViewController.swift in Sources */,
 				ECB289CB2B1E366200239E54 /* ViewController.swift in Sources */,
 				ECB289D12B1E366200239E54 /* EventifyDev.xcdatamodeld in Sources */,
@@ -393,6 +413,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventifyDev/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Eventify;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -403,6 +424,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[sdk=*]" = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.raynelz.EventifyDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -423,6 +448,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventifyDev/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Eventify;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
