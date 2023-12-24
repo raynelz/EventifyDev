@@ -4,5 +4,6 @@ use_frameworks!
 
 target 'EventifyDev' do
     pod 'SnapKit', '~> 5.6.0'
+    pod 'SwiftGen', '~> 6.0'
     pod 'lottie-ios'
 end
