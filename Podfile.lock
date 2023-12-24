@@ -1,24 +1,20 @@
 PODS:
   - lottie-ios (4.3.3)
   - SnapKit (5.6.0)
-  - SwiftGen (6.6.2)
 
 DEPENDENCIES:
   - lottie-ios
   - SnapKit (~> 5.6.0)
-  - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - lottie-ios
     - SnapKit
-    - SwiftGen
 
 SPEC CHECKSUMS:
   lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
 
-PODFILE CHECKSUM: 01fec80579b281322c984d4c278c8c86cd261213
+PODFILE CHECKSUM: b30e199102169f76de3337dfa2e1e5edba9e2de3
 
 COCOAPODS: 1.14.2

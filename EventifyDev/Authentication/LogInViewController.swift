@@ -116,10 +116,10 @@ private extension LogInViewController {
         view.backgroundColor = .white
         
         header.textColor = .label
-        header.font = UIFont(name: "SF Pro Rounded Semibold", size: 40)
+        header.font = UIFont(name: S.Fonts.semibold, size: 40)
         
         subheader.textColor = .secondaryLabel
-        subheader.font = UIFont(name: "SF Pro Rounded Medium", size: 20)
+        subheader.font = UIFont(name: S.Fonts.medium, size: 20)
         subheader.numberOfLines = 0
         
         emailTextField.borderStyle = .roundedRect
@@ -130,13 +130,13 @@ private extension LogInViewController {
         forgotPasswordButton.setTitleColor(.gray, for: .normal)
         
         loginButton.setTitleColor(.black, for: .normal)
-        loginButton.backgroundColor = .brandYellow
+        loginButton.backgroundColor = I.brandYellow.color
         loginButton.layer.cornerRadius = 8
         
         signUpButton.setTitleColor(.black, for: .normal)
         
         dontHaveAnAccountLabel.textColor = .gray
-        dontHaveAnAccountLabel.font = UIFont(name: "SF Pro Rounded Regular", size: 20)
+        dontHaveAnAccountLabel.font = UIFont(name: S.Fonts.regular, size: 20)
         
     }
 }
@@ -145,7 +145,7 @@ private extension LogInViewController {
 
 private extension LogInViewController {
     func setupData() {
-        header.text = "Log In"
+        header.text = S.Login.title
         subheader.text = "Please, create a new account.\nIt takes less than one minute."
         
         loginButton.setTitle("Log In", for: .normal)
@@ -167,8 +167,6 @@ private extension LogInViewController {
 private extension LogInViewController {
     /// Функция для настройки поведения, нажатия, делегаты и т.д.
     func setupBehavior() {
-        print("OK")
+        print("Render OK!")
     }
-    
-    
 }
