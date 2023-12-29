@@ -8,28 +8,58 @@ import UIKit
 import SnapKit
 
 final class ViewController: UIViewController {
-    private let testLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Test Passed!"
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let testLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(testLabel)
-        setConstraints()
+        
+        embedViews()
+        setupLayout()
+        setupAppearance()
+        setupText()
     }
 }
 
-extension ViewController {
-    private func setConstraints() {
-        // testLabel
-        testLabel.snp.makeConstraints { make in
-            make.centerX.equalTo(view.snp.centerX)
-            make.centerY.equalTo(view.snp.centerY)
+//MARK: Embed Views
+private extension ViewController {
+    
+    func embedViews() {
+        view.addSubview(testLabel)
+    }
+    
+}
+
+
+//MARK: - Setup Layout
+private extension ViewController {
+    
+    func setupLayout() {
+        testLabel.snp.makeConstraints {
+            $0.centerX.equalTo(view.snp.centerX)
+            $0.centerY.equalTo(view.snp.centerY)
         }
     }
+    
+}
+
+//MARK: - Setup Appearance
+private extension ViewController {
+    
+    func setupAppearance() {
+        view.backgroundColor = .white
+        
+        testLabel.font = .systemFont(ofSize: 32, weight: .semibold)
+        testLabel.textAlignment = .center
+        testLabel.numberOfLines = 0
+    }
+    
+}
+
+//MARK: Setup Text
+private extension ViewController {
+    
+    func setupText() {
+        testLabel.text = "Test Passed!"
+    }
+    
 }

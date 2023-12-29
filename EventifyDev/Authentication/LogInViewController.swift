@@ -11,7 +11,6 @@ import SnapKit
 
 final class LogInViewController: UIViewController {
     
-    //MARK: - UI
     private let header = UILabel()
     private let subheader = UILabel()
     private let dontHaveAnAccountLabel = UILabel()
@@ -33,9 +32,10 @@ final class LogInViewController: UIViewController {
         setupBehavior()
     }
 }
-//MARK: - Add New Views
 
+//MARK: - Embed Views
 private extension LogInViewController {
+    
     func embedViews() {
         [
             header,
@@ -48,10 +48,12 @@ private extension LogInViewController {
             dontHaveAnAccountLabel
         ].forEach { view.addSubview($0) }
     }
+    
 }
-//MARK: - Constraints
 
+//MARK: - Setup Layout
 private extension LogInViewController {
+    
     func setupLayout() {
         header.snp.makeConstraints {
             $0.top.equalTo(view.snp.topMargin).offset(50)
@@ -104,12 +106,11 @@ private extension LogInViewController {
             $0.top.equalTo(dontHaveAnAccountLabel.snp.bottomMargin).offset(5)
             $0.centerX.equalTo(view.snp.centerX)
         }
-        
     }
+    
 }
 
 //MARK: - Setup Appearance
-
 private extension LogInViewController {
     /// Функция для настройки цветов, шрифтов и всего UI
     func setupAppearance() {
@@ -137,13 +138,13 @@ private extension LogInViewController {
         
         dontHaveAnAccountLabel.textColor = .gray
         dontHaveAnAccountLabel.font = UIFont(name: S.Fonts.regular, size: 20)
-        
     }
+    
 }
 
-//MARK: - setupData
-
+//MARK: - Setup Text
 private extension LogInViewController {
+    
     func setupData() {
         header.text = S.Login.title
         subheader.text = "Please, create a new account.\nIt takes less than one minute."
@@ -160,13 +161,34 @@ private extension LogInViewController {
         
         dontHaveAnAccountLabel.text = "Don’t have an account?"
     }
+    
 }
 
 //MARK: - Setup Behavior
-
 private extension LogInViewController {
     /// Функция для настройки поведения, нажатия, делегаты и т.д.
     func setupBehavior() {
-        print("Render OK!")
+        signUpButton.addTarget(self, action: #selector(showSignUpView), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(showTestView), for: .touchUpInside)
+        forgotPasswordButton.addTarget(self, action: #selector(showForgotPasswordView), for: .touchUpInside)
     }
+    
+    @objc
+    func showTestView(sender: UIButton!) {
+        let nextViewController = ViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @objc 
+    func showForgotPasswordView(sender: UIButton!) {
+        let nextViewController = ForgotPasswordViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @objc
+    func showSignUpView(sender: UIButton!) {
+        let nextViewController = SignUpViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
 }

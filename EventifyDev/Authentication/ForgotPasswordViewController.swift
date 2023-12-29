@@ -9,7 +9,6 @@ import SnapKit
 
 final class ForgotPasswordViewController: UIViewController {
     
-    //MARK: - UI
     private let header = UILabel()
     private let subheader = UILabel()
     
@@ -22,13 +21,8 @@ final class ForgotPasswordViewController: UIViewController {
         embedViews()
         setupLayout()
         setupAppearance()
-        setupData()
+        setupText()
         setupBehavior()
-    }
-    
-    //MARK: - Send Email
-    @objc func sendEmail() {
-        print("Email send!")
     }
 }
 
@@ -43,6 +37,7 @@ private extension ForgotPasswordViewController {
             resetButton
         ].forEach { view.addSubview($0) }
     }
+    
 }
 
 //MARK: - Setup Layout
@@ -76,6 +71,7 @@ private extension ForgotPasswordViewController {
             $0.height.equalTo(50)
         }
     }
+    
 }
 
 //MARK: - Setup Appearance
@@ -97,12 +93,13 @@ private extension ForgotPasswordViewController {
         resetButton.backgroundColor = I.brandYellow.color
         resetButton.setTitleColor(.black, for: .normal)
     }
+    
 }
 
-//MARK: - Setup Data
+//MARK: - Setup Text
 private extension ForgotPasswordViewController {
     /// Функция для установки данных в UI
-    func setupData() {
+    func setupText() {
         header.text = "Password reset"
         subheader.text = """
         Enter your email adress that you used
@@ -113,6 +110,7 @@ private extension ForgotPasswordViewController {
         emailTextField.placeholder = "Email"
         resetButton.setTitle("Send", for: .normal)
     }
+    
 }
 
 //MARK: - Setup Behavior
@@ -121,5 +119,11 @@ private extension ForgotPasswordViewController {
     func setupBehavior() {
         resetButton.addTarget(self, action: #selector(sendEmail), for: .touchUpInside)
     }
+    
+    @objc
+    func sendEmail() {
+        print("Email send!")
+    }
+    
 }
 
