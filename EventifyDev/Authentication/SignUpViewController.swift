@@ -23,14 +23,11 @@ final class SignUpViewController: UIViewController {
         embedViews()
         setupLayout()
         setupAppearance()
-        setupData()
+        setupText()
         setupBehavior()
     }
-    @objc func SignUp() {
-        print("you signed up")
-    }
-    
 }
+
 //MARK: - Embed Views
 private extension SignUpViewController {
     /// Функция для добавления вью-элементов в иерархию вью-элементов.
@@ -43,7 +40,9 @@ private extension SignUpViewController {
             signupButton
         ].forEach { view.addSubview($0) }
     }
+    
 }
+
 //MARK: - Setup Layout
 private extension SignUpViewController {
     /// Функция расчёта для констрейнтов.
@@ -80,7 +79,9 @@ private extension SignUpViewController {
             $0.height.equalTo(50)
         }
     }
+    
 }
+
 //MARK: - Setup Appearance
 private extension SignUpViewController {
     /// Функция для настройки цветов, шрифтов и всего UI
@@ -103,11 +104,13 @@ private extension SignUpViewController {
         signupButton.backgroundColor = I.brandYellow.color
         signupButton.setTitleColor(.black, for: .normal)
     }
+    
 }
+
 //MARK: - Setup Data
 private extension SignUpViewController {
     /// Функция для установки данных в UI
-    func setupData() {
+    func setupText() {
         header.text = S.Signup.title
         subheader.text = "Please, create a new account. It takes less than one minute."
         
@@ -116,11 +119,19 @@ private extension SignUpViewController {
 
         signupButton.setTitle("Sign Up", for: .normal)
     }
+    
 }
+
 //MARK: - Setup Behavior
 private extension SignUpViewController {
     /// Функция для настройки поведения, нажатия, делегаты и т.д.
     func setupBehavior() {
         signupButton.addTarget(self, action: #selector(SignUp), for: .touchUpInside)
     }
+    
+    @objc
+    func SignUp() {
+        print("you signed up")
+    }
+    
 }
